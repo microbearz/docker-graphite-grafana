@@ -1,6 +1,6 @@
 # docker-graphite-grafana
 
-A docker container that running latest graphite/grafana packages.
+A docker container that contains latest graphite/grafana packages.
 
 # System information
 

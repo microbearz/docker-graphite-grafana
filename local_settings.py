@@ -1,15 +1,5 @@
-import os
-
 # Edit this file to override the default graphite settings, do not edit settings.py
 SECRET_KEY = 'b9UMTrY7JZwbNLne'
-
-# Settings
-WEB_DIR = os.path.dirname( os.path.abspath(__file__) )
-WEBAPP_DIR = os.path.dirname(WEB_DIR)
-STATICFILES_DIRS = (
-	os.path.join(WEBAPP_DIR, 'content'),
-	'/usr/local/webapp',
-)
 
 # Turn on debugging and restart apache if you ever see an "Internal Server Error" page
 # DEBUG = True

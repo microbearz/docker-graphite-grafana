@@ -21,9 +21,11 @@ A docker container that contains latest graphite/grafana packages.
 ## Build and tag image
 
 To build it with default grafana username and password (grafana:grafana):  
+
     $ docker build -t ubuntu/grafana .
 
 To build it with customized grafana username and password:  
+
     $ docker biuld -t ubuntu/grafan --build-arg USERNAME=grafana PASSWORD=4WjsHqLUNWyy .
 
 ## Run your build
@@ -36,4 +38,4 @@ Open your browser and visit http://127.0.0.1:3000
 
 # Acknowlegement
 
-This repository borrowed a lot code from: https://github.com/nickstenning/docker-graphite
+This repository borrowed a lot of code from: https://github.com/nickstenning/docker-graphite

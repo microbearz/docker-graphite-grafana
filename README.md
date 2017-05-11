@@ -33,3 +33,7 @@ To build it with customized grafana username and password:
 # Access grafana dashboard
 
 Open your browser and visit http://127.0.0.1:3000 
+
+# Acknowlegement
+
+This repository borrowed a lot code from: https://github.com/nickstenning/docker-graphite

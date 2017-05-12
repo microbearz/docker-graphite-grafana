@@ -29,11 +29,13 @@ run     apt-get update && apt-get -y install curl apt-transport-https
 run     curl -s https://packagecloud.io/gpg.key | apt-key add -
 run     echo "deb https://packagecloud.io/grafana/stable/debian/ jessie main" | tee -a /etc/apt/sources.list
 run     apt-get update && apt-get -y install grafana
-arg     USERNAME=grafana
-arg     PASSWORD=grafana
+arg     GRAFANA_USERNAME=grafana
+arg     GRAFANA_PASSWORD=grafana
+arg     GRAFANA_URL=http://localhost:3000
 run     sed -i "s/;admin_user = admin/admin_user = $USERNAME/gi" /etc/grafana/grafana.ini
 run     sed -i "s/;admin_password = admin/admin_password = $PASSWORD/gi" /etc/grafana/grafana.ini
 run     sed -i "s/;allow_sign_up = true/allow_sign_up = false/gi" /etc/grafana/grafana.ini
+run     sed -i "s/;root_url = http:\/\/localhost:3000/root_url = $GRAFANA_URL/gi" /etc/grafana/grafana.ini
 
 # Install nginx
 # add   ./nginx.conf /etc/nginx/nginx.conf

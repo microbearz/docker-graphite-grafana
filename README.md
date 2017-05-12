@@ -24,9 +24,9 @@ To build it with default grafana username and password (grafana:grafana):
 
     $ docker build -t ubuntu/grafana .
 
-To build it with customized grafana username and password:  
+To build it with customized grafana username and password, and a customized url:  
 
-    $ docker biuld -t ubuntu/grafan --build-arg USERNAME=grafana PASSWORD=4WjsHqLUNWyy .
+    $ docker biuld -t ubuntu/grafana --build-arg GRAFANA_USERNAME=grafana GRAFANA_PASSWORD=4WjsHqLUNWyy GRAFANA_URL=http://www.example/grafana .
 
 ## Run your build
 

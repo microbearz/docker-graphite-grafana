@@ -35,7 +35,7 @@ arg     GRAFANA_URL=http://localhost:3000
 run     sed -i "s/;admin_user = admin/admin_user = $USERNAME/gi" /etc/grafana/grafana.ini
 run     sed -i "s/;admin_password = admin/admin_password = $PASSWORD/gi" /etc/grafana/grafana.ini
 run     sed -i "s/;allow_sign_up = true/allow_sign_up = false/gi" /etc/grafana/grafana.ini
-run     sed -i "s/;root_url = http:\/\/localhost:3000/root_url = $GRAFANA_URL/gi" /etc/grafana/grafana.ini
+run     sed -i "s~;root_url = http://localhost:3000~root_url = $GRAFANA_URL~i" /etc/grafana/grafana.ini
 
 # Install nginx
 # add   ./nginx.conf /etc/nginx/nginx.conf

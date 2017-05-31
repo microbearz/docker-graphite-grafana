@@ -15,7 +15,7 @@ run     pip install graphite-web==1.0.1 --install-option="--prefix=/opt/graphite
 run     pip install carbon==1.0.1 --install-option="--prefix=/opt/graphite" --install-option="--install-lib=/opt/graphite/lib"
 add     ./local_settings.py /opt/graphite/webapp/graphite/local_settings.py
 add     ./storage-schemas.conf /opt/graphite/conf/storage-schemas.conf
-run      cp /opt/graphite/conf/carbon.conf.example /opt/graphite/conf/carbon.conf
+run     cp /opt/graphite/conf/carbon.conf.example /opt/graphite/conf/carbon.conf
 run     mkdir -p /opt/graphite/storage/whisper
 run     touch /opt/graphite/storage/graphite.db /opt/graphite/storage/index
 run     mkdir -p /opt/graphite/storage/log/webapp
